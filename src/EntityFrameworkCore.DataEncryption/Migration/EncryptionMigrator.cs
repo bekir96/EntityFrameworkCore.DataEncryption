@@ -25,7 +25,7 @@ namespace Microsoft.EntityFrameworkCore.DataEncryption.Migration
     /// </example>
     public static class EncryptionMigrator
     {
-        private static readonly MethodInfo SetMethod = typeof(DbContext).GetMethod(nameof(DbContext.Set));
+        private static readonly MethodInfo SetMethod = typeof(DbContext).GetMethod(nameof(DbContext.Set), new Type[0]);
 
         private static IQueryable<object> Set(this DbContext context, IEntityType entityType)
         {
